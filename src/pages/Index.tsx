@@ -38,11 +38,9 @@ const Index = () => {
                 </Button>
               </div>
               <div className="rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Restaurant Interior" 
-                  className="w-full h-full object-cover"
-                />
+                <!--he-->
+                  
+              
               </div>
             </div>
           </div>
