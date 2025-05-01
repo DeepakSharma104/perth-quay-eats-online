@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Phone, Coffee, Beer, Utensils, Cake, Fish } from 'lucide-react';
+import { Phone, Coffee, Beer, Utensils, Cake, Fish, Calendar } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Menu = () => {
