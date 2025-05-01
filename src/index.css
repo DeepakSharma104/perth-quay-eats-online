@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 45 33% 96%;  /* Cream background */
-    --foreground: 210 44% 16%; /* Navy text */
+    --background: 48 83% 93%;  /* Custom cream background */
+    --foreground: 27 46% 22%; /* Custom brown text */
 
     --card: 0 0% 100%;
-    --card-foreground: 210 44% 16%;
+    --card-foreground: 27 46% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 44% 16%;
+    --popover-foreground: 27 46% 22%;
 
-    --primary: 357 64% 41%; /* Red */
-    --primary-foreground: 45 33% 96%;
+    --primary: 40 100% 54%; /* Custom gold */
+    --primary-foreground: 27 100% 15%;
 
-    --secondary: 43 58% 52%; /* Gold */
-    --secondary-foreground: 210 44% 16%;
+    --secondary: 27 46% 22%; /* Custom brown */
+    --secondary-foreground: 48 83% 93%;
 
-    --muted: 45 33% 90%; /* Lighter cream */
-    --muted-foreground: 210 44% 36%;
+    --muted: 48 83% 87%; /* Lighter cream */
+    --muted-foreground: 27 46% 42%;
 
-    --accent: 210 44% 26%; /* Darker navy */
-    --accent-foreground: 45 33% 96%;
+    --accent: 27 100% 15%; /* Custom dark brown */
+    --accent-foreground: 48 83% 93%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 44% 16%;
+    --border: 27 46% 82%;
+    --input: 27 46% 82%;
+    --ring: 27 46% 22%;
 
     --radius: 0.5rem;
   }
@@ -49,7 +49,7 @@
   }
 
   body {
-    @apply bg-restaurant-cream text-restaurant-navy font-sans;
+    @apply bg-custom-cream text-custom-dark-brown font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -63,7 +63,7 @@
 
 /* Custom Styles */
 .hero-gradient {
-  background: linear-gradient(rgba(15, 42, 65, 0.7), rgba(15, 42, 65, 0.4));
+  background: linear-gradient(rgba(78, 31, 0, 0.7), rgba(78, 31, 0, 0.4));
 }
 
 .section-padding {
@@ -71,5 +71,30 @@
 }
 
 .page-header {
-  @apply py-16 md:py-20 lg:py-24 bg-restaurant-navy text-white;
+  @apply py-16 md:py-20 lg:py-24 bg-custom-dark-brown text-custom-cream;
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  @apply opacity-0;
+}
+
+.animate-on-scroll.animate-fade-in {
+  @apply animate-fade-in;
+}
+
+.animate-on-scroll.animate-slide-in {
+  @apply animate-slide-in;
+}
+
+.animate-on-scroll.animate-scale-in {
+  @apply animate-scale-in;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.story-link {
+  @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-custom-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
 }

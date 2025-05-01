@@ -68,6 +68,13 @@ export default {
 					'red': '#AB2328',
 					'gold': '#D4AF37',
 					'cream': '#F5F2E9',
+				},
+				// New custom colors based on the RGB values provided
+				'custom': {
+					'cream': 'rgb(248, 244, 225)',
+					'gold': 'rgb(254, 186, 23)',
+					'brown': 'rgb(116, 81, 45)',
+					'dark-brown': 'rgb(78, 31, 0)',
 				}
 			},
 			borderRadius: {
@@ -91,11 +98,53 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				// New animations
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				// New animations
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-in': 'slide-in 0.5s ease-out forwards',
+				'scale-in': 'scale-in 0.3s ease-out forwards',
+				'float': 'float 3s ease-in-out infinite'
 			},
 			fontFamily: {
 				'serif': ['Merriweather', 'serif'],
