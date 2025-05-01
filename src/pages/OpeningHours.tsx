@@ -3,7 +3,8 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
-import { Clock, Calendar } from 'lucide-react';
+import { Clock, Calendar, Utensils, Music, Coffee, Beer } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const OpeningHours = () => {
   return (
@@ -33,12 +34,24 @@ const OpeningHours = () => {
                   </div>
                   
                   <div className="space-y-4 text-center">
-                    <p className="text-xl font-bold">Open 7 days a week</p>
-                    <p className="text-3xl font-bold text-restaurant-navy">1:00 PM to 11:00 PM</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      <div className="p-4 border-b md:border-b-0 md:border-r border-gray-200">
+                        <p className="font-bold">Monday to Thursday:</p>
+                        <p className="text-xl">11:00 AM - 10:00 PM</p>
+                      </div>
+                      <div className="p-4">
+                        <p className="font-bold">Friday to Saturday:</p>
+                        <p className="text-xl">11:00 AM - 11:00 PM</p>
+                      </div>
+                    </div>
+                    <div className="p-4 border-t border-gray-200">
+                      <p className="font-bold">Sunday:</p>
+                      <p className="text-xl">10:00 AM - 9:00 PM</p>
+                    </div>
                     
-                    <div className="py-4 border-t border-b border-gray-200 mt-6">
+                    <div className="py-4 border-t border-gray-200 mt-6">
                       <p className="text-gray-600">
-                        Our kitchen serves food until 9:30 PM daily.
+                        Our kitchen serves food until 9:30 PM daily (8:30 PM on Sundays).
                       </p>
                     </div>
                   </div>
@@ -55,7 +68,7 @@ const OpeningHours = () => {
                   <div className="bg-white p-6 rounded-lg shadow-md">
                     <h3 className="text-xl font-bold mb-3 text-restaurant-navy">Sunday Roast</h3>
                     <p className="mb-2">
-                      Every Sunday we serve our traditional Sunday Roast from 1:00 PM until 8:00 PM.
+                      Every Sunday we serve our traditional Sunday Roast from 12:00 PM until 8:00 PM.
                     </p>
                     <p className="text-restaurant-red font-medium">
                       Booking recommended to avoid disappointment.
@@ -80,6 +93,116 @@ const OpeningHours = () => {
                     <p className="text-restaurant-red font-medium">
                       No cover charge. Kitchen open until regular closing time.
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Our Services Section */}
+              <div className="mt-16">
+                <div className="flex items-center mb-6">
+                  <Utensils size={28} className="text-restaurant-red mr-3" />
+                  <h2 className="text-2xl font-bold">Our Services</h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Online Ordering</h3>
+                    <p>Order your favorite dishes from the comfort of your own home and have them delivered or ready for pickup.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Reservations</h3>
+                    <p>Book a table in advance to ensure a smooth and hassle-free dining experience.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Takeout</h3>
+                    <p>Enjoy our delicious food from the comfort of your own home.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Delivery</h3>
+                    <p>Get our dishes delivered right to your doorstep.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Catering</h3>
+                    <p>Let us handle the food for your next event or party.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Private Dining</h3>
+                    <p>Book our private room for special occasions or events.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Events</h3>
+                    <p>Host your next event or party with us, and let us take care of the food and atmosphere.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Loyalty Program</h3>
+                    <p>Join our loyalty program and earn rewards and discounts.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Gift Cards</h3>
+                    <p>Purchase gift cards for friends and family.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Party Platters</h3>
+                    <p>Order large quantities of our dishes for your next gathering or event.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Meal Plans</h3>
+                    <p>Sign up for our meal plans and enjoy our food at a discounted rate.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Dietary Options</h3>
+                    <p>We offer gluten-free, vegan, and other options to cater to your dietary needs.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Special Services Section */}
+              <div className="mt-16">
+                <div className="flex items-center mb-6">
+                  <Coffee size={28} className="text-restaurant-red mr-3" />
+                  <h2 className="text-2xl font-bold">Special Features</h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <Music size={40} className="text-restaurant-gold mb-3" />
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Live Music</h3>
+                    <p>Enjoy live performances from local musicians every Friday evening.</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <Coffee size={40} className="text-restaurant-gold mb-3" />
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Outdoor Seating</h3>
+                    <p>Enjoy your meal in our comfortable outdoor patio area.</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <Beer size={40} className="text-restaurant-gold mb-3" />
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Happy Hour</h3>
+                    <p>Special deals on drinks Monday-Thursday, 4PM-6PM.</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <Coffee size={40} className="text-restaurant-gold mb-3" />
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Kids Menu</h3>
+                    <p>Special menu options for our younger guests.</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <Coffee size={40} className="text-restaurant-gold mb-3" />
+                    <h3 className="text-lg font-bold mb-2 text-restaurant-navy">Pet-Friendly</h3>
+                    <p>Pets are welcome in our outdoor seating area.</p>
                   </div>
                 </div>
               </div>
